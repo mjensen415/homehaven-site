@@ -36,13 +36,11 @@ export const Navigation = () => {
           {/* Logo */}
           <button 
             onClick={scrollToTop}
-            className="flex items-center transition-opacity hover:opacity-80"
+            className={`text-2xl font-bold transition-colors ${
+              isScrolled ? 'text-primary' : 'text-white'
+            }`}
           >
-            <img 
-              src="/gv-house-logo.png" 
-              alt="GV House Solutions" 
-              className="h-8 w-auto"
-            />
+            GV House
           </button>
 
           {/* Desktop Navigation */}
