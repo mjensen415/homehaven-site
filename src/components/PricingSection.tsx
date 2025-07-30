@@ -157,8 +157,8 @@ export const PricingSection = () => {
                 <p className="text-muted-foreground">If you're not happy with our service, we'll make it right or refund your payment.</p>
               </div>
               <div>
-                <h4 className="font-semibold mb-2 text-lg">Licensed & Insured</h4>
-                <p className="text-muted-foreground">All work performed by licensed professionals with full insurance coverage.</p>
+                <h4 className="font-semibold mb-2 text-lg">Fully Insured</h4>
+                <p className="text-muted-foreground">Complete insurance protection and bonding for all services and your property.</p>
               </div>
             </div>
           </div>

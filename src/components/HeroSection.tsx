@@ -20,7 +20,7 @@ export const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
             <Shield className="h-4 w-4" />
-            <span className="text-sm font-medium">Licensed & Insured</span>
+            <span className="text-sm font-medium">Fully Insured</span>
           </div>
           
           {/* Main Headline */}

@@ -5,8 +5,8 @@ export const AboutSection = () => {
   const features = [
     {
       icon: Shield,
-      title: "Licensed & Insured",
-      description: "Fully licensed professionals with comprehensive insurance coverage for your peace of mind."
+      title: "Fully Insured",
+      description: "Comprehensive insurance coverage and bonding for complete protection and your peace of mind."
     },
     {
       icon: Award,
