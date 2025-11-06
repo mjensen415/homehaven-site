@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Calendar, Clock, Home, Phone, Mail, User } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 interface BookingModalProps {
   children: React.ReactNode;
@@ -14,6 +15,7 @@ interface BookingModalProps {
 
 export const BookingModal = ({ children }: BookingModalProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,23 +28,43 @@ export const BookingModal = ({ children }: BookingModalProps) => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Walkthrough Requested!",
-      description: "We'll contact you within 24 hours to confirm your appointment.",
-    });
-    setIsOpen(false);
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      address: "",
-      serviceType: "",
-      preferredDate: "",
-      preferredTime: "",
-      description: ""
-    });
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke('send-walkthrough-email', {
+        body: formData
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Walkthrough Requested!",
+        description: "We'll contact you within 24 hours to confirm your appointment.",
+      });
+      
+      setIsOpen(false);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        serviceType: "",
+        preferredDate: "",
+        preferredTime: "",
+        description: ""
+      });
+    } catch (error: any) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your request. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -179,8 +201,12 @@ export const BookingModal = ({ children }: BookingModalProps) => {
             />
           </div>
 
-          <Button type="submit" className="w-full bg-primary hover:bg-primary-hover">
-            Request Free Walkthrough
+          <Button 
+            type="submit" 
+            className="w-full bg-primary hover:bg-primary-hover"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Submitting..." : "Request Free Walkthrough"}
           </Button>
         </form>
       </DialogContent>
