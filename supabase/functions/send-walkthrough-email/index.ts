@@ -60,7 +60,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email notification - REPLACE WITH YOUR EMAIL
     const emailResponse = await resend.emails.send({
       from: "GV House <onboarding@resend.dev>",
-      to: ["your-email@example.com"], // REPLACE THIS WITH YOUR EMAIL
+      to: ["info@gvhouse.com"],
       subject: `New Walkthrough Request from ${formData.name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
