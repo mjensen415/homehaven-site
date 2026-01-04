@@ -40,7 +40,7 @@ export const BookingModal = ({ children }: BookingModalProps) => {
       if (error) throw error;
 
       toast({
-        title: "Walkthrough Requested!",
+        title: "Assessment Requested!",
         description: "We'll contact you within 24 hours to confirm your appointment.",
       });
       
@@ -80,7 +80,7 @@ export const BookingModal = ({ children }: BookingModalProps) => {
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2 text-xl">
             <Calendar className="h-5 w-5 text-primary" />
-            Book Your Free Walkthrough
+            Get Your Free Home Assessment
           </DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 pt-4">
@@ -206,7 +206,7 @@ export const BookingModal = ({ children }: BookingModalProps) => {
             className="w-full bg-primary hover:bg-primary-hover"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Submitting..." : "Request Free Walkthrough"}
+            {isSubmitting ? "Submitting..." : "Request Free Home Assessment"}
           </Button>
         </form>
       </DialogContent>

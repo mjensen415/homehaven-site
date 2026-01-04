@@ -61,10 +61,10 @@ const handler = async (req: Request): Promise<Response> => {
     const emailResponse = await resend.emails.send({
       from: "GV House <onboarding@resend.dev>",
       to: ["info@gvhouse.com"],
-      subject: `New Walkthrough Request from ${formData.name}`,
+      subject: `New Home Assessment Request from ${formData.name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h1 style="color: #333;">New Walkthrough Request</h1>
+          <h1 style="color: #333;">New Home Assessment Request</h1>
           
           <h2 style="color: #666;">Contact Information</h2>
           <p><strong>Name:</strong> ${formData.name}</p>

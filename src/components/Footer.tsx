@@ -18,13 +18,16 @@ export const Footer = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Home Experience?
           </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+          <p className="text-xl mb-4 opacity-90 max-w-2xl mx-auto">
             Join hundreds of satisfied homeowners who've discovered the convenience 
             of professional home care without the hassle.
           </p>
+          <p className="text-lg mb-8 font-semibold text-secondary">
+            🎁 Book this week to receive a complimentary smart water leak detector!
+          </p>
           <BookingModal>
             <Button size="lg" className="bg-secondary hover:bg-secondary-hover text-secondary-foreground px-8 py-4 text-lg font-semibold">
-              Book a Free Walkthrough Today
+              Get My Free Home Assessment
             </Button>
           </BookingModal>
         </div>
