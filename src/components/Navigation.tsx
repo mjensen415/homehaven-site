@@ -152,7 +152,7 @@ export const Navigation = () => {
                 </a>
                 <BookingModal>
                   <Button className="w-full bg-primary hover:bg-primary-hover">
-                    Book Walkthrough
+                    Get Free Assessment
                   </Button>
                 </BookingModal>
               </div>

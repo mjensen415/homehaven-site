@@ -24,10 +24,15 @@ export const HeroSection = () => {
           </div>
           
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
             We tackle your <span className="text-secondary">to-dos</span>,<br />
             so you don't have to
           </h1>
+          
+          {/* Social Proof Sub-headline */}
+          <p className="text-lg md:text-xl mb-6 font-medium text-secondary">
+            Serving 500+ Homeowners in the Bay Area
+          </p>
           
           {/* Subtitle */}
           <p className="text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto opacity-90">
@@ -55,7 +60,7 @@ export const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <BookingModal>
               <Button size="lg" className="bg-secondary hover:bg-secondary-hover text-secondary-foreground px-8 py-4 text-lg font-semibold group">
-                Book a Free Walkthrough
+                Get My Free Home Assessment
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </BookingModal>
