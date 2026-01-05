@@ -54,13 +54,14 @@ export const PricingSection = () => {
       icon: Gem,
       description: "White-glove concierge service for luxury homes and discerning owners",
       features: [
-        "Weekly home inspections",
-        "All repairs & maintenance included",
+        "Monthly home inspections",
+        "All minor repairs & maintenance included",
         "Unlimited service calls",
-        "24/7 emergency hotline",
+        "Emergency hotline",
         "Preventive maintenance program",
         "Home automation management",
-        "Materials up to $100/month included",
+        "Access to DIY Community",
+        "Materials credit up to $150/quarter included",
         "Dedicated account manager",
         "Annual home improvement consultation"
       ],
