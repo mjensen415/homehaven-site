@@ -23,7 +23,7 @@ export const Footer = () => {
             of professional home care without the hassle.
           </p>
           <p className="text-lg mb-8 font-semibold text-secondary">
-            🎁 Book this week to receive a complimentary smart water leak detector!
+            🎁 Book this week to receive a complimentary smart home assessment!
           </p>
           <BookingModal>
             <Button size="lg" className="bg-secondary hover:bg-secondary-hover text-secondary-foreground px-8 py-4 text-lg font-semibold">
