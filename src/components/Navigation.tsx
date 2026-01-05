@@ -82,13 +82,13 @@ export const Navigation = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <a 
-              href="tel:(650)555-4484"
+              href="tel:415-272-1050"
               className={`flex items-center gap-2 hover:text-secondary transition-colors ${
                 isScrolled ? 'text-foreground' : 'text-white'
               }`}
             >
               <Phone className="h-4 w-4" />
-              (650) 555-GVHOUSE
+              (415) 272-1050
             </a>
             <BookingModal>
               <Button 
@@ -144,11 +144,11 @@ export const Navigation = () => {
               </button>
               <div className="px-4 py-2 border-t">
                 <a 
-                  href="tel:(650)555-4484"
+                  href="tel:415-272-1050"
                   className="flex items-center gap-2 text-foreground hover:text-secondary transition-colors mb-3"
                 >
                   <Phone className="h-4 w-4" />
-                  (650) 555-GVHOUSE
+                  (415) 272-1050
                 </a>
                 <BookingModal>
                   <Button className="w-full bg-primary hover:bg-primary-hover">
