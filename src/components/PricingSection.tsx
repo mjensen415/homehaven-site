@@ -12,11 +12,12 @@ export const PricingSection = () => {
       icon: Star,
       description: "Perfect for busy homeowners who want essential maintenance covered",
       features: [
-        "Monthly home inspection",
+        "Quarterly home inspection",
         "Basic repairs included",
-        "2 service calls per month",
+        "1 service call per quarter",
         "Emergency response priority",
         "Seasonal maintenance checklist",
+        "Access to DIY Community",
         "Email progress reports"
       ],
       limitations: [
@@ -32,13 +33,13 @@ export const PricingSection = () => {
       icon: Crown,
       description: "Comprehensive care for homeowners who want worry-free maintenance",
       features: [
-        "Bi-weekly home inspections",
+        "Quarterly home inspections",
         "All minor repairs included",
-        "4 service calls per month",
+        "1 service call per month",
         "Priority emergency response",
         "Seasonal deep maintenance",
-        "Smart home integration",
-        "Materials up to $50/month included",
+        "Smart home integration plan",
+        "Materials credit up to $50/quarter included",
         "Detailed maintenance reports"
       ],
       limitations: [
