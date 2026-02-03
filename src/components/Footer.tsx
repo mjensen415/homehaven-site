@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { BookingModal } from "./BookingModal";
 import { Separator } from "@/components/ui/separator";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -40,7 +41,7 @@ export const Footer = () => {
             
             {/* Company Info */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">GV House</h3>
+              <img src={logo} alt="GV House Solutions" className="h-16 w-auto mb-4" />
               <p className="mb-6 opacity-90 leading-relaxed">
                 Premium handyman and home maintenance service. We tackle your to-dos, 
                 so you don't have to.
@@ -142,7 +143,7 @@ export const Footer = () => {
       <div className="py-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-90">
-            <p>&copy; {currentYear} GV House. All rights reserved.</p>
+            <p>&copy; {currentYear} GV House Solutions. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-secondary transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-secondary transition-colors">Terms of Service</a>
