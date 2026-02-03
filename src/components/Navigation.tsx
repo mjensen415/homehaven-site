@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { BookingModal } from "./BookingModal";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/logo.png";
-import logoDark from "@/assets/logo-dark.png";
+import logo from "@/assets/logo-dark.png";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,10 +40,16 @@ export const Navigation = () => {
             className="flex items-center gap-2"
           >
             <img 
-              src={isScrolled ? logoDark : logo} 
+              src={logo} 
               alt="GV House Solutions" 
-              className="h-10 w-auto"
+              className="h-8 w-auto object-contain"
+              style={{ maxWidth: '40px' }}
             />
+            <span className={`text-xl font-bold transition-colors ${
+              isScrolled ? 'text-primary' : 'text-white'
+            }`}>
+              GV House
+            </span>
           </button>
 
           {/* Desktop Navigation */}
