@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { BookingModal } from "./BookingModal";
 import { Separator } from "@/components/ui/separator";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-dark.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
