@@ -4,46 +4,46 @@ import { Star, Quote } from "lucide-react";
 export const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Sarah Mitchell",
-      location: "Palo Alto, CA",
+      name: "Sarah M.",
+      location: "Napa, CA",
       rating: 5,
-      text: "GV House has been a game-changer for our family. The Elite plan gives us complete peace of mind - everything just gets taken care of before we even notice it needs attention. Their team is professional, reliable, and incredibly skilled.",
-      service: "Elite House Care"
+      text: "I kept putting off the Nest setup, the cameras, and the dead wifi zones in our back house. My husband tried twice and gave up. GV House came out on a Tuesday and by noon everything was working — including the guest house we'd basically written off. Didn't try to upsell me on anything. Just fixed what needed fixing.",
+      service: "Pro"
     },
     {
-      name: "Michael Chen",
-      location: "San Francisco, CA",
+      name: "Kevin R.",
+      location: "Fairfield, CA",
       rating: 5,
-      text: "As a busy executive, I don't have time to deal with home maintenance. The Luxurious Upkeep plan is worth every penny - they handle everything seamlessly. My home has never been in better condition.",
-      service: "Luxurious Upkeep"
+      text: "I had 11 things wrong with my house that I'd been ignoring for two years. They knocked out nine of them in one visit. The other two needed parts — and they followed up the next week without me having to ask. That follow-through is rare.",
+      service: "Essential"
     },
     {
-      name: "Jennifer Rodriguez",
-      location: "Mountain View, CA",
+      name: "Diane C.",
+      location: "Green Valley, CA",
       rating: 5,
-      text: "The Premium Maintenance plan is perfect for our needs and budget. The team is always punctual, courteous, and does excellent work. I love getting the monthly reports showing everything they've maintained.",
-      service: "Premium Maintenance"
+      text: "As a single homeowner there's always something I don't know how to handle or don't have time for. Having GV House on call has been a relief I didn't know I needed. They caught a slow leak under my sink before it became a real problem. Worth every penny.",
+      service: "Pro"
     },
     {
-      name: "David Thompson",
-      location: "Menlo Park, CA",
+      name: "Marcus T.",
+      location: "Cordelia, CA",
       rating: 5,
-      text: "I was skeptical about subscription home services, but GV House exceeded all expectations. They fixed issues I didn't even know existed and now my home runs like clockwork. Highly recommended!",
-      service: "Elite House Care"
+      text: "Moved in six months ago and the previous owners left a mess — half-installed smart devices, bad wifi in half the house, a thermostat that made no sense. GV House untangled all of it in an afternoon. Finally feels like I actually own this place.",
+      service: "Essential"
     },
     {
-      name: "Lisa Park",
-      location: "Redwood City, CA",
+      name: "Linda & Tom B.",
+      location: "Napa, CA",
       rating: 5,
-      text: "The smart home integration service was fantastic. They set up everything perfectly and now I can control my entire home from my phone. The ongoing support is excellent too.",
-      service: "Premium Maintenance"
+      text: "We travel a lot and needed someone we could genuinely trust with the house while we're gone. They noticed our water heater making a new sound and had it looked at before we even got home. That kind of proactive care is exactly what we were looking for.",
+      service: "Concierge"
     },
     {
-      name: "Robert Wilson",
-      location: "Los Altos, CA",
+      name: "Jason P.",
+      location: "Fairfield, CA",
       rating: 5,
-      text: "Having a dedicated account manager with the Luxurious plan makes all the difference. They know my home inside and out, and the service is truly white-glove. Best investment I've made for my property.",
-      service: "Luxurious Upkeep"
+      text: "Honestly I was skeptical about a monthly maintenance fee — felt like another subscription I didn't need. Three months in, they've probably saved me $800 in stuff that would've gotten worse if I'd kept ignoring it. The math works.",
+      service: "Essential"
     }
   ];
 
@@ -57,8 +57,7 @@ export const TestimonialsSection = () => {
               What Our <span className="text-primary">Clients Say</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what homeowners across the Bay Area 
-              are saying about their GV House experience.
+              Here's what homeowners across Solano, Napa, and the North Bay are saying about their GV House experience.
             </p>
           </div>
 
