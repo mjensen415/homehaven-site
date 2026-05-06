@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { BookingModal } from "./BookingModal";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/logo-dark.png";
+import logoDark from "@/assets/logo-dark.png";
+import logoLight from "@/assets/logo.png";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +41,7 @@ export const Navigation = () => {
             className="flex items-center gap-2"
           >
             <img 
-              src={logo} 
+              src={isScrolled ? logoDark : logoLight}
               alt="GV House Solutions" 
               className="h-8 w-auto object-contain"
               style={{ maxWidth: '40px' }}

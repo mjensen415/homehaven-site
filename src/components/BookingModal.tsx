@@ -7,7 +7,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Calendar, Clock, Home, Phone, Mail, User } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 
 interface BookingModalProps {
   children: React.ReactNode;
@@ -33,17 +32,22 @@ export const BookingModal = ({ children }: BookingModalProps) => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.functions.invoke('send-walkthrough-email', {
-        body: formData
+      const response = await fetch("https://formspree.io/f/xaqvjppq", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
-      if (error) throw error;
+      if (!response.ok) throw new Error("Submission failed");
 
       toast({
         title: "Assessment Requested!",
         description: "We'll contact you within 24 hours to confirm your appointment.",
       });
-      
+
       setIsOpen(false);
       setFormData({
         name: "",
@@ -53,10 +57,9 @@ export const BookingModal = ({ children }: BookingModalProps) => {
         serviceType: "",
         preferredDate: "",
         preferredTime: "",
-        description: ""
+        description: "",
       });
-    } catch (error: any) {
-      console.error('Error submitting form:', error);
+    } catch (error) {
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request. Please try again.",
